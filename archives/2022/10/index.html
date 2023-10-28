@@ -6,7 +6,9 @@
 
     <head>
       <meta charset="utf-8" />
-        
+       
+      <meta name="keywords" content="一个用以充门面的网站" />
+       
       <meta name="description" content="无聊搞的，现在还在测试" />
       
       <meta
@@ -106,8 +108,8 @@
     <ul>
       <li>
         Copyrights &copy;
-        2015-2023
-        <i class="ri-heart-fill heart_icon"></i> John Doe
+        1145-2023
+        <i class="ri-heart-fill heart_icon"></i> 高二14全体成员-晓君
       </li>
     </ul>
     <ul>
@@ -443,6 +445,42 @@
 </style>
     
     
+<script>
+  const password = "123456";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "Please enter password",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "Ok",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Incorrect password, please try again",
+            confirmButtonText: "Ok",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
 
   </div>
 </body>
