@@ -153,6 +153,56 @@
     
     
     <article
+  id="post-夜深了，来学点东西吧"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/10/28/%E5%A4%9C%E6%B7%B1%E4%BA%86%EF%BC%8C%E6%9D%A5%E5%AD%A6%E7%82%B9%E4%B8%9C%E8%A5%BF%E5%90%A7/"
+    >夜深了，来学点东西吧</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/10/28/%E5%A4%9C%E6%B7%B1%E4%BA%86%EF%BC%8C%E6%9D%A5%E5%AD%A6%E7%82%B9%E4%B8%9C%E8%A5%BF%E5%90%A7/" class="article-date">
+  <time datetime="2023-10-28T14:19:03.000Z" itemprop="datePublished">2023-10-28</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>#测试测试视频是否正常插入，顺便让你学点东西。</p>
+
+<iframe src="//player.bilibili.com/player.html?aid=364744878&bvid=BV1U94y1t748&cid=1301284009&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-项目"
   class="article article-type-post"
   itemscope
@@ -696,42 +746,6 @@
 </style>
     
     
-<script>
-  const password = "123456";
-  const lock_password = window.sessionStorage.getItem("lock_password");
-  console.log(password, lock_password);
-  if (lock_password !== password) {
-    Swal.fire({
-      title: "Please enter password",
-      input: "text",
-      inputAttributes: {
-        autocapitalize: "off",
-      },
-      showCancelButton: false,
-      showLoaderOnConfirm: true,
-      allowOutsideClick: false,
-      confirmButtonText: "Ok",
-    }).then((result) => {
-      console.log(result);
-      if (result.isConfirmed) {
-        console.log(password);
-        if (result.value === password) {
-          window.sessionStorage.setItem("lock_password", result.value);
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "Incorrect password, please try again",
-            confirmButtonText: "Ok",
-            allowOutsideClick: false,
-          }).then(() => {
-            window.location.reload();
-          });
-        }
-      }
-    });
-  }
-</script>
-
 
   </div>
 </body>
